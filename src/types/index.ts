@@ -11,3 +11,7 @@ export interface MenuItemProps {
 export interface withRootLayoutHocProps {
   component: ComponentType;
 }
+
+export interface TitleProps {
+  title: string;
+}

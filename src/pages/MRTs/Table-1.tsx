@@ -1,5 +1,6 @@
 import { MaterialReactTable, MRT_ColumnDef } from "material-react-table";
 import withRootLayout from "../../HOCs/withRootLayout";
+import Title from "../../components/Title";
 
 // Define your data type
 type Person = {
@@ -25,7 +26,12 @@ const columns: MRT_ColumnDef<Person>[] = [
 ];
 
 const Table = () => {
-  return <MaterialReactTable columns={columns} data={data} />;
+  return (
+    <>
+      <Title title="Basic Table" />
+      <MaterialReactTable columns={columns} data={data} />;
+    </>
+  );
 };
 
 export default withRootLayout({
