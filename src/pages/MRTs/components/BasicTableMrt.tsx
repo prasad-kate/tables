@@ -1,6 +1,5 @@
 import { MaterialReactTable, MRT_ColumnDef } from "material-react-table";
-import withRootLayout from "../../HOCs/withRootLayout";
-import Title from "../../components/Title";
+import Title from "../../../components/Title";
 
 // Define your data type
 type Person = {
@@ -25,7 +24,7 @@ const columns: MRT_ColumnDef<Person>[] = [
   { header: "Address", accessorKey: "address" },
 ];
 
-const Table = () => {
+const BasicTable = () => {
   return (
     <>
       <Title title="Basic Table" />
@@ -34,6 +33,4 @@ const Table = () => {
   );
 };
 
-export default withRootLayout({
-  component: Table,
-});
+export default BasicTable;

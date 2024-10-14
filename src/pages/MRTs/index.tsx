@@ -1,11 +1,16 @@
-import Table1 from "./Table-1";
+import withRootLayout from "../../HOCs/withRootLayout";
+import BasicTable from "./components/BasicTableMrt";
+import ExportToCsvTable from "./components/ExcelExportTypeMrt";
 
 function MaterialReactTable() {
   return (
     <div>
-      <Table1 />
+      <BasicTable />
+      <ExportToCsvTable />
     </div>
   );
 }
 
-export default MaterialReactTable;
+export default withRootLayout({
+  component: MaterialReactTable,
+});
