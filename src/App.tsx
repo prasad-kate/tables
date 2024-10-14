@@ -1,7 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import Table1 from "./pages/MRTs/Table-1";
+import MaterialReactTable from "./pages/MRTs";
 
 function App() {
   return (
@@ -11,8 +10,8 @@ function App() {
         <Route path="*" element={<>Page not found</>} />
 
         {/* routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/table-1" element={<Table1 />} />
+        <Route path="/" element={<Navigate to={"/material-react-table"} />} />
+        <Route path="/material-react-table" element={<MaterialReactTable />} />
       </Routes>
     </BrowserRouter>
   );

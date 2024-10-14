@@ -1,7 +1,7 @@
 export const routePaths = [
   {
-    name: "table-1",
-    path: "/table-1",
+    name: "Material React Table",
+    path: "/material-react-table",
   },
   {
     name: "table-2",
