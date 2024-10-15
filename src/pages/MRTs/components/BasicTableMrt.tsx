@@ -26,10 +26,10 @@ const columns: MRT_ColumnDef<Person>[] = [
 
 const BasicTable = () => {
   return (
-    <>
+    <div className="table-container">
       <Title title="Basic Table" />
-      <MaterialReactTable columns={columns} data={data} />;
-    </>
+      <MaterialReactTable columns={columns} data={data} />
+    </div>
   );
 };
 
