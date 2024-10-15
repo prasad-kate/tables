@@ -1,6 +1,7 @@
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { Box, Button } from "@mui/material";
-import { download, generateCsv, mkConfig } from "export-to-csv"; //or use your library of choice here
+import { jsPDF } from "jspdf"; //or use your library of choice here
+import autoTable from "jspdf-autotable";
 import {
   createMRTColumnHelper,
   MaterialReactTable,
@@ -38,22 +39,18 @@ const columns = [
   }),
 ];
 
-const csvConfig = mkConfig({
-  fieldSeparator: ",",
-  decimalSeparator: ".",
-  useKeysAsHeaders: true,
-});
-
-const ExportToCsvTable = () => {
+const ExportToPdfTable = () => {
   const handleExportRows = (rows: MRT_Row<Person>[]) => {
-    const rowData = rows.map((row) => row.original);
-    const csv = generateCsv(csvConfig)(rowData);
-    download(csvConfig)(csv);
-  };
+    const doc = new jsPDF();
+    const tableData = rows.map((row) => Object.values(row.original));
+    const tableHeaders = columns.map((c) => c.header);
 
-  const handleExportData = () => {
-    const csv = generateCsv(csvConfig)(data);
-    download(csvConfig)(csv);
+    autoTable(doc, {
+      head: [tableHeaders],
+      body: tableData,
+    });
+
+    doc.save("mrt-pdf-example.pdf");
   };
 
   const table = useMaterialReactTable({
@@ -72,13 +69,6 @@ const ExportToCsvTable = () => {
           flexWrap: "wrap",
         }}
       >
-        <Button
-          //export all data that is currently in the table (ignore pagination, sorting, filtering, etc.)
-          onClick={handleExportData}
-          startIcon={<FileDownloadIcon />}
-        >
-          Export All Data
-        </Button>
         <Button
           disabled={table.getPrePaginationRowModel().rows.length === 0}
           //export all rows, including from the next page, (still respects filtering and sorting)
@@ -113,10 +103,10 @@ const ExportToCsvTable = () => {
 
   return (
     <div className="table-container">
-      <Title title="Export to CSV table" />
+      <Title title="Export to PDF table" />
       <MaterialReactTable table={table} />
     </div>
   );
 };
 
-export default ExportToCsvTable;
+export default ExportToPdfTable;
