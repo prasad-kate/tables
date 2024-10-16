@@ -3,6 +3,7 @@ import BasicTable from "./components/BasicTableMrt";
 import ColumnOrderingTable from "./components/ColumnOrderingMrt";
 import ExportToCsvTable from "./components/ExcelExportTypeMrt";
 import ExportToPdfTable from "./components/PdfExportTypeMrt";
+import RowDraggingTable from "./components/RowDraggingMrt";
 import RowOrderingTable from "./components/RowOrderingMrt";
 
 function MaterialReactTable() {
@@ -13,6 +14,7 @@ function MaterialReactTable() {
       <ExportToPdfTable />
       <ColumnOrderingTable />
       <RowOrderingTable />
+      <RowDraggingTable />
     </div>
   );
 }
