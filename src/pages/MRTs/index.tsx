@@ -2,6 +2,7 @@ import withRootLayout from "../../HOCs/withRootLayout";
 import BasicTable from "./components/BasicTableMrt";
 import ColumnOrderingTable from "./components/ColumnOrderingMrt";
 import ExportToCsvTable from "./components/ExcelExportTypeMrt";
+import InlineCellEditTypeTable from "./components/InlineCellEditMrt";
 import InlineRowEditTypeTable from "./components/InlineRowEditMrt";
 import ModalExportTypeTable from "./components/ModalEditingTypeMrt";
 import ExportToPdfTable from "./components/PdfExportTypeMrt";
@@ -19,6 +20,7 @@ function MaterialReactTable() {
       <RowDraggingTable />
       <ModalExportTypeTable />
       <InlineRowEditTypeTable />
+      <InlineCellEditTypeTable />
     </div>
   );
 }
