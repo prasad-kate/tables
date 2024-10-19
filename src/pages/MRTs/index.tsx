@@ -9,6 +9,7 @@ import ModalExportTypeTable from "./components/ModalEditingTypeMrt";
 import ExportToPdfTable from "./components/PdfExportTypeMrt";
 import RowDraggingTable from "./components/RowDraggingMrt";
 import RowOrderingTable from "./components/RowOrderingMrt";
+import TreeEditingTypeTable from "./components/TreeEditingMrt";
 
 function MaterialReactTable() {
   return (
@@ -23,6 +24,7 @@ function MaterialReactTable() {
       <InlineRowEditTypeTable />
       <InlineCellEditTypeTable />
       <InlineTableEditTypeTable />
+      <TreeEditingTypeTable />
     </div>
   );
 }

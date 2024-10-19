@@ -227,3 +227,105 @@ export const usStates = [
   "Wyoming",
   "Puerto Rico",
 ];
+
+// tree type table details
+export type AnotherUser = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  city: string;
+  state: string;
+  managerId: string | null;
+  subRows?: AnotherUser[];
+};
+
+export const anotherFakeData: AnotherUser[] = [
+  {
+    id: "1",
+    firstName: "Dylan",
+    lastName: "Murray",
+    city: "East Daphne",
+    state: "Kentucky",
+    managerId: null,
+    subRows: [
+      {
+        id: "1.1",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        city: "South Linda",
+        state: "West Virginia",
+        managerId: "1",
+        subRows: [
+          {
+            id: "1.1.1",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            city: "South Linda",
+            state: "West Virginia",
+            managerId: "1.1",
+          },
+          {
+            id: "1.1.2",
+            firstName: "Jordan",
+            lastName: "Clarkson",
+            city: "San Francisco",
+            state: "California",
+            managerId: "1.1",
+          },
+        ],
+      },
+      {
+        id: "1.2",
+        firstName: "Brittany",
+        lastName: "McCullough",
+        city: "Lincoln",
+        state: "Nebraska",
+        managerId: "1",
+      },
+    ],
+  },
+  {
+    id: "2",
+    firstName: "Raquel",
+    lastName: "Kohler",
+    city: "Columbus",
+    state: "Ohio",
+    managerId: null,
+    subRows: [
+      {
+        id: "2.1",
+        firstName: "Branson",
+        lastName: "Frami",
+        city: "Charleston",
+        state: "South Carolina",
+        managerId: "2",
+      },
+    ],
+  },
+  {
+    id: "3",
+    firstName: "Jordon",
+    lastName: "Harris",
+    city: "Perth",
+    state: "Western Australia",
+    managerId: null,
+    subRows: [
+      {
+        id: "3.1",
+        firstName: "Eldora",
+        lastName: "Koch",
+        city: "Perth",
+        state: "Western Australia",
+        managerId: "3",
+      },
+      {
+        id: "3.2",
+        firstName: "Glenn",
+        lastName: "Crist",
+        city: "Darwin",
+        state: "Northern Territory",
+        managerId: "3",
+      },
+    ],
+  },
+];
