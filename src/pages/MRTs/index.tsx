@@ -2,6 +2,7 @@ import withRootLayout from "../../HOCs/withRootLayout";
 import BasicTable from "./components/BasicTableMrt";
 import ColumnOrderingTable from "./components/ColumnOrderingMrt";
 import ExportToCsvTable from "./components/ExcelExportTypeMrt";
+import ExpandingDetailsTypeTable from "./components/ExpandingDetailsPanelMrt";
 import ExpandingSubRowsTypeTable from "./components/ExpandingSubRowsTypeMrt";
 import InlineCellEditTypeTable from "./components/InlineCellEditMrt";
 import InlineRowEditTypeTable from "./components/InlineRowEditMrt";
@@ -27,6 +28,7 @@ function MaterialReactTable() {
       <InlineTableEditTypeTable />
       <TreeEditingTypeTable />
       <ExpandingSubRowsTypeTable />
+      <ExpandingDetailsTypeTable />
     </div>
   );
 }
