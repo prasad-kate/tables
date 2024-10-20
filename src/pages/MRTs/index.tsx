@@ -1,5 +1,6 @@
 import withRootLayout from "../../HOCs/withRootLayout";
 import BasicTable from "./components/BasicTableMrt";
+import ChartDetailsTypeTable from "./components/ChartDetailsMrt";
 import ColumnOrderingTable from "./components/ColumnOrderingMrt";
 import ExportToCsvTable from "./components/ExcelExportTypeMrt";
 import ExpandingDetailsTypeTable from "./components/ExpandingDetailsPanelMrt";
@@ -29,6 +30,7 @@ function MaterialReactTable() {
       <TreeEditingTypeTable />
       <ExpandingSubRowsTypeTable />
       <ExpandingDetailsTypeTable />
+      <ChartDetailsTypeTable />
     </div>
   );
 }
