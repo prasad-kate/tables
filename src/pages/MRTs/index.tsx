@@ -5,6 +5,7 @@ import ColumnOrderingTable from "./components/ColumnOrderingMrt";
 import ExportToCsvTable from "./components/ExcelExportTypeMrt";
 import ExpandingDetailsTypeTable from "./components/ExpandingDetailsPanelMrt";
 import ExpandingSubRowsTypeTable from "./components/ExpandingSubRowsTypeMrt";
+import FilterWithVariantsTypeTable from "./components/FilterVarianstMrt";
 import InlineCellEditTypeTable from "./components/InlineCellEditMrt";
 import InlineRowEditTypeTable from "./components/InlineRowEditMrt";
 import InlineTableEditTypeTable from "./components/InlineTableEditMrt";
@@ -31,6 +32,7 @@ function MaterialReactTable() {
       <ExpandingSubRowsTypeTable />
       <ExpandingDetailsTypeTable />
       <ChartDetailsTypeTable />
+      <FilterWithVariantsTypeTable />
     </div>
   );
 }
